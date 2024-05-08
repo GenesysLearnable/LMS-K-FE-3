@@ -7,6 +7,10 @@
 2. You'll be prompted to select a framework and the template (variant). Select react for framework and Javascript + SWC for variant
 3. Now run those commands
 
+git init
+git remote add link
+
+
    ```
    cd LMS-K-FE-3
    npm install
