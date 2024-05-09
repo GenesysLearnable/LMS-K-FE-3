@@ -1,27 +1,62 @@
-import React from 'react'
-import SignupBtn from './SignupBtn'
-import LoginBtn from './LoginBtn'
-import logo from '../assets/logo.png'
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 export default function NavBar() {
-	return (
-		<>
+  return (
+    <>
       <header>
         <nav class="justify-center flex flex-col sm:flex-row sm:text-left sm:justify-between px-6 w-full">
           <div class="sm:mb-0">
-            <a href="#" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"><img src= { logo } alt="learnable kids logo" /></a>
+            <Link
+              to="#"
+              class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"
+            >
+              <img src={logo} alt="learnable kids logo" />
+            </Link>
           </div>
           <div class="mt-3 flex gap-12">
-            <a href="#" class="text-2xl font-bold no-underline text-[#130E5D] ml-2">Courses</a>
-            <a href="#" class="text-2xl font-bold no-underline text-[#130E5D] ml-2">Contact</a>
-            <a href="#" class="text-2xl font-bold no-underline text-[#130E5D] ml-2">Price</a>
+            <Link
+              to="#"
+              class="text-2xl font-bold no-underline text-[#130E5D] ml-2"
+            >
+              Courses
+            </Link>
+            <Link
+              to="#"
+              class="text-2xl font-bold no-underline text-[#130E5D] ml-2"
+            >
+              Contact
+            </Link>
+            <Link
+              to="#"
+              class="text-2xl font-bold no-underline text-[#130E5D] ml-2"
+            >
+              Price
+            </Link>
           </div>
           <div class="flex align-top mt-2">
-            <LoginBtn />
-            <SignupBtn />
+            <Link
+              to="/Login"
+              class="text-2xl font-bold no-underline text-[#130E5D] ml-2"
+            >
+              <button
+                type="button"
+                class="text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl px-5 py-2.5 me-5"
+              >
+                Log In
+              </button>
+            </Link>
+
+            <button
+              type="button"
+              class="text-[#04031C] bg-white font-bold rounded-md text-xl px-5 py-2.5 me-5 bg-yellow-400"
+            >
+              Sign Up
+            </button>
           </div>
         </nav>
       </header>
     </>
-	)
+  );
 }
