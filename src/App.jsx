@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import LandingPage from './pages/landing_page/LandingPage'
+import { useState } from "react";
+import "./App.css";
+import LandingPage from "./pages/landing_page/LandingPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./Login";
 
 function App() {
   return (
-    <>
-      <LandingPage />
-    </>
-  )
+    <Router>
+      <>
+        <Routes>
+          <Route exact path="/" element={<LandingPage />}></Route>{" "}
+        </Routes>
+      </>
+    </Router>
+  );
 }
 
-export default App
+export default App;
