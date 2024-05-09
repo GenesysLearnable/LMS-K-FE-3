@@ -1,9 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,300;0,500;1,300&family=Secular+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,300;0,500;1,300&family=Secular+One&display=swap");
 
 #root {
-  max-width: 95%;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   font-family: quicksand;
+}
 
+.custom-shape-divider-top-1715259054 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1715259054 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1715259054 .shape-fill {
+  fill: #ffe787;
+}
+
+.curve {
+  position: relative;
 }

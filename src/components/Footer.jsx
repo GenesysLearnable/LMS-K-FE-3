@@ -5,13 +5,13 @@ export default function footer() {
 	return (
 		<>
 			<footer>
-				<div class="text-center">
-					<p class="font-bold text-5xl">Contact Us</p>
-					<p class="text-base font-bold mt-5">
+				<div className="text-center">
+					<p className="font-bold text-5xl">Contact Us</p>
+					<p className="text-base font-bold mt-5">
 						Reach out at learnablekids-feedback@learnable.com
 					</p>
-					<div class="flex justify-center items-center mt-5">
-						<div class="flex gap-x-5">
+					<div className="flex justify-center items-center mt-5">
+						<div className="flex gap-x-5">
 							<a href="">1</a>
 							<a href="">2</a>
 							<a href="">3</a>
@@ -19,8 +19,8 @@ export default function footer() {
 							<a href="">5</a>
 						</div>
 					</div>
-					<div class="flex gap-x-20 justify-center items-center">
-						<div class="flex font-bold gap-x-5 mt-5">
+					<div className="flex gap-x-20 justify-center items-center">
+						<div className="flex font-bold gap-x-5 mt-5">
 							<a href="">About</a>
 							<a href="">Careers</a>
 							<a href="">Apps</a>
