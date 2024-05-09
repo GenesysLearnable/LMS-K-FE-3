@@ -3,7 +3,6 @@ import kids_1 from "../assets/kids_1.png";
 import kids_2 from "../assets/kids_2.png";
 import kids_3 from "../assets/kids_3.png";
 import kids_4 from "../assets/kids_4.png";
-import logo from "../assets/logo.png";
 import phonics from "../assets/phonics.png";
 import reasoning from "../assets/reasoning.png";
 import math from "../assets/math.png";
@@ -14,22 +13,9 @@ export default function MainSection() {
 		<>
 			<main>
 				<section className="curve">
-					<div className="custom-shape-divider-top-1715259054">
-						<svg
-							data-name="Layer 1"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 1200 120"
-							preserveAspectRatio="none"
-						>
-							<path
-								d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-								className="shape-fill"
-							></path>
-						</svg>
-					</div>
-					<div className="mt-10 flex flex-col items-center justify-center">
-						<div className="flex gap-x-28 w-[1034px]">
-							<div className="space-y-5">
+					<div className="mt-10 flex flex-col items-center justify-center bg-[#FFE787]">
+						<div className="flex gap-x-28 w-[1034px] mt-10">
+							<div className="space-y-5 mt-5">
 								<p className="text-5xl font-bold text-[#130E5D]">
 									Learning can be hard <br /> we make it{" "}
 									<span className="text-[#FF6A00]">fun!</span>
@@ -42,7 +28,7 @@ export default function MainSection() {
 								<div className="flex flex-col items-center justify-center">
 									<button
 										type="button"
-										className="text-xl text-white bg-white bg-[#130E5D] rounded-md p-3"
+										className="text-xl text-white bg-[#130E5D] rounded-md p-3"
 									>
 										Get started
 									</button>
@@ -52,6 +38,19 @@ export default function MainSection() {
 								<img src={kids_1} alt="" />
 							</div>
 						</div>
+					</div>
+					<div class="custom-shape-divider-top-1715287324">
+						<svg
+							data-name="Layer 1"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 1200 120"
+							preserveAspectRatio="none"
+						>
+							<path
+								d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+								class="shape-fill"
+							></path>
+						</svg>
 					</div>
 				</section>
 
@@ -98,7 +97,20 @@ export default function MainSection() {
 				</section>
 
 				<section>
-					<div className="flex justify-center">
+					<div class="custom-shape-divider-bottom-1715288144">
+						<svg
+							data-name="Layer 1"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 1200 120"
+							preserveAspectRatio="none"
+						>
+							<path
+								d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+								class="shape-fill"
+							></path>
+						</svg>
+					</div>
+					<div className="flex justify-center bg-[#FFE787]">
 						<div className="flex flex-col items-center justify-center w-[1034px]">
 							<div className="space-y-5 text-center">
 								<h1 className="text-5xl font-bold text-[#130E5D]">
@@ -113,9 +125,9 @@ export default function MainSection() {
 					</div>
 				</section>
 
-				<section className="flex justify-center">
+				<section className="flex justify-center bg-[#FFE787]">
 					<div className="flex justify-center gap-x-10 w-[1034px]">
-						<div className="text-center shadow-lg py-10 rounded-xl my-10 flex flex-col items-center w-1/4">
+						<div className="text-center shadow-lg bg-white py-10 rounded-xl my-10 flex flex-col items-center w-1/4">
 							<img src={phonics} alt="" />
 							<div>
 								<h1 className="text-[45px] font-bold text-[#130E5D]">
@@ -128,7 +140,7 @@ export default function MainSection() {
 							</div>
 						</div>
 
-						<div className="text-center shadow-lg py-10 rounded-xl my-10 flex flex-col items-center w-1/4">
+						<div className="text-center shadow-lg bg-white py-10 rounded-xl my-10 flex flex-col items-center w-1/4">
 							<img src={math} alt="" />
 							<div>
 								<h1 className="text-[45px] font-bold text-[#130E5D]">
@@ -142,7 +154,7 @@ export default function MainSection() {
 							</div>
 						</div>
 
-						<div className="text-center shadow-lg py-10 rounded-xl my-10 flex flex-col items-center w-1/4">
+						<div className="text-center shadow-lg bg-white py-10 rounded-xl my-10 flex flex-col items-center w-1/4">
 							<img src={vocabulary} alt="" />
 							<div>
 								<h1 className="text-[45px] font-bold text-[#130E5D]">
@@ -155,7 +167,7 @@ export default function MainSection() {
 							</div>
 						</div>
 
-						<div className="text-center shadow-lg py-10 rounded-xl my-10 flex flex-col items-center w-1/4">
+						<div className="text-center shadow-lg bg-white py-10 rounded-xl my-10 flex flex-col items-center w-1/4">
 							<img src={reasoning} alt="" />
 							<div>
 								<h1 className="text-[45px] font-bold text-[#130E5D]">
@@ -171,6 +183,19 @@ export default function MainSection() {
 				</section>
 
 				<section>
+					<div class="custom-shape-divider-top-1715292153">
+						<svg
+							data-name="Layer 1"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 1200 120"
+							preserveAspectRatio="none"
+						>
+							<path
+								d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+								class="shape-fill"
+							></path>
+						</svg>
+					</div>
 					<div className="flex flex-col items-center justify-center">
 						<div className="flex gap-x-28 items-center w-[1034px]">
 							<div className="space-y-5">
