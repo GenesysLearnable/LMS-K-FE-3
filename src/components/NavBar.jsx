@@ -12,9 +12,9 @@ export default function NavBar() {
             <a href="#" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"><img src= { logo } alt="learnable kids logo" /></a>
           </div>
           <div class="mt-3 flex gap-12">
-            <a href="#" class="text-2xl font-bold no-underline text-grey-darkest hover:text-blue-dark ml-2">Courses</a>
-            <a href="#" class="text-2xl font-bold no-underline text-grey-darkest hover:text-blue-dark ml-2">Contact</a>
-            <a href="#" class="text-2xl font-bold no-underline text-grey-darkest hover:text-blue-dark ml-2">Price</a>
+            <a href="#" class="text-2xl font-bold no-underline text-[#130E5D] ml-2">Courses</a>
+            <a href="#" class="text-2xl font-bold no-underline text-[#130E5D] ml-2">Contact</a>
+            <a href="#" class="text-2xl font-bold no-underline text-[#130E5D] ml-2">Price</a>
           </div>
           <div class="flex align-top mt-2">
             <LoginBtn />
