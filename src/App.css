@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,300;0,500;1,300&family=Secular+One&display=swap');
+
+#root {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: quicksand;
+
+}
