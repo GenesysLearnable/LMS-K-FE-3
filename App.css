@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  border: 0;
+  background-color: #ffd941;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+section {
+  background-color: #fffdf3;
+  height: fit-content;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  position: fixed;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 80%;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 80%;
+}
+input {
+  background-color: #ffe787;
+  border-color: #130e5d;
+  color: #6b6b69;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 300;
+  border-radius: 10px;
+  border-width: 0.1px;
+}
+
+input::placeholder {
+  color: #6b6b69;
+}
+
+#login-button {
+  padding: 10px;
+  color: #130e5d;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #ffd012;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 2px 2px 2px #ffe787;
+}
+
+.auto-login {
+  border-style: dashed;
+  border-width: 0.5px;
+  border-radius: 3px;
+  border-color: #9747ff;
+  padding: 5px;
+}
+
+.auto-login button {
+  border-color: #130e5d;
+  border-style: solid;
+  background-color: transparent;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.auto-login button img {
+  height: 1rem;
+}
+
+.or-span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  background-color: #130e5d;
+  height: 1.5px;
+  width: 40%;
+}
