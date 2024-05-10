@@ -37,7 +37,7 @@ export default function NavBar() {
           </div>
           <div className="flex align-top mt-2">
             <Link
-              to="/Login"
+              to="/SignupForm"
               className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
             >
               <button

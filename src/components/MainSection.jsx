@@ -14,8 +14,8 @@ export default function MainSection() {
 			<main>
 				<section className="curve">
 					<div className="mt-10 flex flex-col items-center justify-center bg-[#FFE787]">
-						<div className="flex gap-x-28 w-[1034px] mt-10">
-							<div className="space-y-5 mt-5">
+						<div className="flex gap-x-28 w-[1034px] mt-2">
+							<div className="space-y-5 mt-10">
 								<p className="text-5xl font-bold text-[#130E5D]">
 									Learning can be hard <br /> we make it{" "}
 									<span className="text-[#FF6A00]">fun!</span>
@@ -28,18 +28,18 @@ export default function MainSection() {
 								<div className="flex flex-col items-center justify-center">
 									<button
 										type="button"
-										className="text-xl text-white bg-[#130E5D] rounded-md p-3"
+										className="text-xl text-white bg-[#130E5D] rounded-md p-5"
 									>
 										Get started
 									</button>
 								</div>
 							</div>
-							<div>
+							<div className="mt-0 pb-20">
 								<img src={kids_1} alt="" />
 							</div>
 						</div>
 					</div>
-					<div class="custom-shape-divider-top-1715287324">
+					<div className="custom-shape-divider-top-1715287324">
 						<svg
 							data-name="Layer 1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ export default function MainSection() {
 						>
 							<path
 								d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-								class="shape-fill"
+								className="shape-fill"
 							></path>
 						</svg>
 					</div>
@@ -97,7 +97,7 @@ export default function MainSection() {
 				</section>
 
 				<section>
-					<div class="custom-shape-divider-bottom-1715288144">
+					<div className="custom-shape-divider-bottom-1715288144">
 						<svg
 							data-name="Layer 1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -106,17 +106,17 @@ export default function MainSection() {
 						>
 							<path
 								d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-								class="shape-fill"
+								className="shape-fill"
 							></path>
 						</svg>
 					</div>
 					<div className="flex justify-center bg-[#FFE787]">
-						<div className="flex flex-col items-center justify-center w-[1034px]">
+						<div className="flex flex-col items-center justify-center w-[1034px] mt-20">
 							<div className="space-y-5 text-center">
 								<h1 className="text-5xl font-bold text-[#130E5D]">
 									What will kids learn
 								</h1>
-								<p className="text-base text-[#04031C]">
+								<p className="text-base text-[#04031C] mt-5 mb-5">
 									Our curriculum is based on recommendations
 									by the National Education Board
 								</p>
@@ -183,7 +183,7 @@ export default function MainSection() {
 				</section>
 
 				<section>
-					<div class="custom-shape-divider-top-1715292153">
+					<div className="custom-shape-divider-top-1715292153">
 						<svg
 							data-name="Layer 1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -192,7 +192,7 @@ export default function MainSection() {
 						>
 							<path
 								d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-								class="shape-fill"
+								className="shape-fill"
 							></path>
 						</svg>
 					</div>
