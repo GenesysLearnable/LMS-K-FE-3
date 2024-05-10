@@ -1,0 +1,101 @@
+
+
+.hiparent-div{
+  background:#ffd166;
+  width: 100vw;
+  height: 287vh;
+  display: flex;
+  justify-content: center;
+  background-repeat:no-repeat ;
+  background-size: cover;
+  
+}
+.hiparent-sub-1{
+  background-color: white;
+  width:57vw;
+  height: 250vh;
+  
+  border-radius: 12px;
+  margin-top: 70px;
+}
+.hiparent-sub .h3 {
+  color:#130E5D;
+  display: flex;
+  align-items: center;
+  
+}
+.hiparent-text-1 {
+    font-size: 40px;
+    font-family: Bubblegum Sans;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    
+    
+}
+
+  
+.hiparent-important{
+    text-align: left;
+    font-family: Bubblegum Sans;
+    margin-left: 70px;
+}
+.hiparent-sub-1{
+  color: #130E5D;
+}
+.hiparent-sub-1 p{
+  color: #130E5D;
+  text-align: left;
+  margin-left: 70px;
+  font-size: 14px;
+  margin-right: 34px;
+  font-family: Quicksand;
+}
+.hiparent-sub-1 h4{
+  font-size: 22px;
+  margin-top: 70px;
+}
+img{
+  width: 37px;
+}
+.text-colume{
+  margin-top: 40px;
+}
+.hiparent-btn-1{
+  position: relative;
+  top: 30px;
+}
+
+.BackBtn-1{
+  position: inherit;
+  left: 70px;
+  border:1px solid #FFC107;
+  color: #130E5D;
+}
+.BackBtn-1:hover{
+  border: 1px solid #FFC107;
+  box-shadow: 1px 1px 1px 1px;
+
+}
+.SignupBtn-1{
+position: inherit;
+left: 550px;
+background:#ffd166;
+color: #130E5D;
+
+}
+.SignupBtn-1:hover{
+  box-shadow: 1px 1px 1px 1px;
+  border: 1px solid #ffd166;
+}
+.hiparent-span{
+  font-family: Bubblegum Sans;
+  font-size: 17px;
+  margin-left:70px ;
+}
+.hiparent-span-1{
+  font-size: 14px;
+  margin-right:7px;
+  font-family: Quicksand;
+}
