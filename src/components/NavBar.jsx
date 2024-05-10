@@ -42,7 +42,7 @@ export default function NavBar() {
             >
               <button
                 type="button"
-                class="text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl px-5 py-2.5 me-5"
+                className="text-[#04031C] border-2 border-[#04031C] font-bold rounded-md text-xl px-5 py-2.5 me-5"
               >
                 Log In
               </button>
@@ -50,7 +50,7 @@ export default function NavBar() {
 
             <button
               type="button"
-              class="text-[#04031C] bg-white font-bold rounded-md text-xl px-5 py-2.5 me-5 bg-yellow-400"
+              className="text-[#04031C] font-bold rounded-md text-xl px-5 py-2.5 me-5 bg-yellow-400"
             >
               Sign Up
             </button>
