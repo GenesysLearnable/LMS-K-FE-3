@@ -11,8 +11,8 @@ import footerkids from "../assets/homepage/images/footerkids.png";
 function HomePage() {
   return (
     <main className=" flex font-quicksand">
-      <aside className=" flex h-dvh flex-col items-center w-[22rem] bg-yellow-300  rounded-r-[2.5rem] py-7 justify-between ">
-        <figure className="">
+      <aside className=" fixed top-0 left-0 flex h-screen flex-col items-center w-[22rem] bg-yellow-300  rounded-r-[2.5rem] py-7 justify-between ">
+        <figure>
           <img src={homelogo} alt="Home Logo" />
         </figure>
 
@@ -26,7 +26,7 @@ function HomePage() {
         </footer>
       </aside>
       {/* px-[4.6875rem] pt-[0.437rem] pb-16 */}
-      <section className=" px-[4.6rem] mx-auto flex-1 h-dvh ">
+      <section className=" px-[4.6rem] mx-auto flex-1 h-dvh overflow-y-auto ml-[22rem] max-w-[]">
         <header className="flex justify-between mt-6 mb-7">
           <figure className="cursor-pointer">
             <img src={profilePicture} alt="profilePicture" />
