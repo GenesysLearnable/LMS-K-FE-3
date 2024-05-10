@@ -1,9 +1,8 @@
-import React from "react";
 import { useState } from "react";
 import "./App.css";
 import LandingPage from "./pages/landing_page/LandingPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./Login";
+import SignupForm from "./pages/sign_up/SignupForm";
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
       <>
         <Routes>
           <Route exact path="/" element={<LandingPage />}></Route>{" "}
-          <Route exact path="/Login" element={<Login />}></Route>{" "}
+          <Route exact path="/SignupForm" element={<SignupForm />}></Route>{" "}
         </Routes>
       </>
     </Router>
