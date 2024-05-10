@@ -12,15 +12,18 @@ function HomePage() {
   return (
     <main className=" flex font-quicksand">
       <aside className=" fixed top-0 left-0 flex h-screen flex-col items-center w-[22rem] bg-yellow-300  rounded-r-[2.5rem] py-7 justify-between ">
-        <figure>
-          <img src={homelogo} alt="Home Logo" />
-        </figure>
+        <div className="flex flex-col items-center">
+          <figure>
+            <img src={homelogo} alt="Home Logo" />
+          </figure>
 
-        <ul className="-mt-60">
-          {features.map((feat) => (
-            <Feature key={feat.feature} featObj={feat} />
-          ))}
-        </ul>
+          <ul className="mt-24">
+            {features.map((feat) => (
+              <Feature key={feat.feature} featObj={feat} />
+            ))}
+          </ul>
+        </div>
+
         <footer className=" font-medium text-gray-600 mb-7 ">
           <small>2024 © Copyright Group3 learnable23</small>
         </footer>
