@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import { Navigate } from "react-router-dom";
 import "../sign_up/Congrat.css";
 // import cheers from "../components/image/Festive flags and hands with decorations.png";
 
@@ -15,7 +17,12 @@ function Congrat() {
           </h3>
           <img src="" className="cheers-image" />
 
-          <button className="BackBtn-2">Continue</button>
+          <button
+            className="BackBtn-2"
+            onClick={() => <Navigate to="/Login" replace={true} />}
+          >
+            Continue
+          </button>
         </div>
       </div>
     </div>

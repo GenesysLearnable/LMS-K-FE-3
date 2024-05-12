@@ -1,8 +1,11 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/rules-of-hooks */
+
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function signup_form() {
   const navigate = useNavigate();
@@ -29,6 +32,7 @@ export default function signup_form() {
   }, [error]);
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (password !== confirmPassword) {
       setError("Passwords do not match");
     } else if (!email || !password || !confirmPassword) {
@@ -40,14 +44,16 @@ export default function signup_form() {
         const response = await PostData();
 
         const data = await response.json();
-        console.log(data.status);
-        if (data.status === "success") {
-          navigate("/Congrat");
+        if (data.status === "Success") {
+          toast.success("Sign up was successful", navigate("/Login"));
         } else if (data.status === "fail") {
-          setError("A parent with this Email already exists.");
+          toast.error(data.message);
+          setError(data.message);
+        } else {
+          throw new Error(data.message);
         }
       } catch (error) {
-        console.log(error);
+        setError(error.message);
       }
     }
   };
@@ -112,6 +118,7 @@ export default function signup_form() {
                   className=" w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
                 />
               </div>
+              <ToastContainer />
               {error && <ErrorMessage message={error} />}
               <button
                 type="submit"

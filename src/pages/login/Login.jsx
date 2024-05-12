@@ -1,5 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -34,15 +37,19 @@ export default function Login() {
 
         const data = await response.json();
         console.log(data.status);
-        if (data.status === "success") {
+        if (data.status.toLowerCase() === "success") {
+          localStorage.setItem("token", data.token);
+
+          toast.success("Login successfully!");
           navigate("/HomePage");
-        } else if (
-          data.status === "fail" &&
-          data.message === "Parent with this email does not exist"
-        ) {
+        } else if (data.status.toLowerCase() === "fail") {
           setError(data.message);
+          toast.error(data.message);
         } else {
           setError("Invalid email or password.");
+          toast.error("Invalid email or password.", {
+            autoClose: 5000,
+          });
         }
       } catch (error) {
         console.log(error);
@@ -98,7 +105,8 @@ export default function Login() {
                   className="p-4 w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
                 />
               </div>
-
+              <ToastContainer />
+              {error && <ErrorMessage message={error} />}
               <p className="font-medium text-right text-2xl text-[#130E5D]">
                 Forgot password
               </p>
@@ -127,5 +135,10 @@ export default function Login() {
         </div>
       </div>
     </>
+  );
+}
+function ErrorMessage({ message }) {
+  return (
+    <p className="text-red-500 text-2xl font-medium italic mb-0">{message}</p>
   );
 }
