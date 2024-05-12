@@ -1,9 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 export default function signup_form() {
-	const navigate = useNavigate();
-
 	return (
 		<>
 			<div className="flex items-center justify-center h-[1100px] w-full bg-yellow-300">
@@ -43,18 +40,6 @@ export default function signup_form() {
 							>
 								Continue
 							</button>
-							<a
-								href="#"
-								className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
-							>
-								<button
-									onClick={() => navigate(-1)}
-									type="button"
-									className="mt-5 text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl p-2 me-5"
-								>
-									Back
-								</button>
-							</a>
 						</form>
 						<div className="flex items-center justify-center mb-7">
 							<div className="border-[2px] border-[#130E5D]"></div>
