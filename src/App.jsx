@@ -1,21 +1,62 @@
 import "./App.css";
 import LandingPage from "./pages/landing_page/LandingPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./Login";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+import Login from "./pages/login/Login";
 import HomePage from "./pages/HomePage";
+import Hiparent from "./pages/sign_up/Hiparent";
+import Notice from "./pages/sign_up/Notice";
+import { ToastContainer } from "react-toastify";
+
 import SignupForm from "./pages/sign_up/SignupForm";
+import Congrat from "./pages/sign_up/Congrat";
+import ProtectedRoutes from "./ProtectedRoutes";
 
-
+const token = localStorage.getItem("token");
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+  {
+    path: "/Login",
+    element: token ? <Navigate to="/HomePage" /> : <Login />,
+  },
+  {
+    path: "/Hiparent",
+    element: <Hiparent />,
+  },
+  {
+    path: "/Notice",
+    element: <Notice />,
+  },
+  {
+    path: "/SignupForm",
+    element: token ? <Navigate to="/HomePage" /> : <SignupForm />,
+  },
+  {
+    path: "/Congrat",
+    element: <Congrat />,
+  },
+  {
+    element: <ProtectedRoutes />,
+    children: [
+      {
+        path: "/HomePage",
+        element: <HomePage />,
+      },
+    ],
+  },
+]);
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<LandingPage />}></Route>
-        <Route exact path="/Login" element={<Login />}></Route>
-        <Route exact path="/SignupForm" element={<SignupForm />}></Route>
-        <Route path="/HomePage" element={<HomePage />}></Route>
-      </Routes>
-    </Router>
+    <>
+      <ToastContainer closeOnClick={true} />
+      <RouterProvider router={router} />;
+    </>
   );
 }
 
