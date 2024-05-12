@@ -1,0 +1,59 @@
+.age-body{
+    background: #ffd166;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.age-sub{
+    background-color: white;
+    width: 50vw;
+    height: 350px;
+    /* margin-bottom: 5px; */
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 12px; 
+}
+.age-body .h3{
+    color:#130E5D;
+    display: flex;
+    align-items: center;
+}
+.age-text{
+    font-size: 30px;
+    font-family: Bubblegum Sans;
+}
+.age-sub{
+    color: #130E5D;
+}
+.age-sub h4{
+    font-size: 12px;
+    margin-top: 10px;
+    font-family: Quicksand;
+}
+.radio-group{
+    font-size: 30px;
+    font-family: Bubblegum Sans;
+}
+.span{
+    margin-left: 10px;
+
+}
+.age-btn{
+    position: relative;
+    top: 30px;
+}
+
+.BackBtn{
+    /* position: inherit; */
+    right: 230px;
+    border:1px solid #130E5D;
+    color: #130E5D;
+    font-family: Quicksand;
+    font-size: 15px; 
+}
+.BackBtn:hover{
+    border: 1px solid #e6e3dc;
+    box-shadow: 1px 1px 1px 1px;
+}
