@@ -37,24 +37,28 @@ export default function NavBar() {
           </div>
           <div className="flex align-top mt-2">
             <Link
-              to="/SignupForm"
+              to="/Login"
               className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
             >
               <button
                 type="button"
-
                 className="text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl px-5 py-2.5 me-5"
               >
                 Log In
               </button>
             </Link>
 
-            <button
-              type="button"
-              className="text-[#04031C] font-bold rounded-md text-xl px-5 py-2.5 me-5 bg-yellow-400"
+            <Link
+              to="/Hiparent"
+              className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
             >
-              Sign Up
-            </button>
+              <button
+                type="button"
+                className="text-[#04031C] font-bold rounded-md text-xl px-5 py-2.5 me-5 bg-yellow-400"
+              >
+                Sign Up
+              </button>
+            </Link>
           </div>
         </nav>
       </header>

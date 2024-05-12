@@ -1,7 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-export default function signup_form() {
+export default function Login() {
 	const navigate = useNavigate();
 
 	return (
@@ -28,33 +27,17 @@ export default function signup_form() {
 									className="p-4 w-full font-medium text-[24px] p-2 mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
 								/>
 							</div>
-							<div className="mb-10">
-								<input
-									type="password"
-									id="retype_password"
-									name="password"
-									placeholder="Retype Password"
-									className="p-4 w-full font-medium text-[24px] p-2 mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
-								/>
-							</div>
+
+							<p className="font-medium text-right text-2xl text-[#130E5D]">
+								Forgot password
+							</p>
+
 							<button
 								type="submit"
-								className="w-full h-[78px] px-4 py-2 text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-2 px-4 mb-2 rounded-xl"
+								className="w-full h-[78px] mt-20 px-4 py-2 text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-2 px-4 mb-2 rounded-xl"
 							>
 								Continue
 							</button>
-							<a
-								href="#"
-								className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
-							>
-								<button
-									onClick={() => navigate(-1)}
-									type="button"
-									className="mt-5 text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl p-2 me-5"
-								>
-									Back
-								</button>
-							</a>
 						</form>
 						<div className="flex items-center justify-center mb-7">
 							<div className="border-[2px] border-[#130E5D]"></div>
