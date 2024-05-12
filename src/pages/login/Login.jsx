@@ -1,14 +1,10 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable react/prop-types */
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function signup_form() {
+export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(null);
 
   // function clearField() {
@@ -27,14 +23,11 @@ export default function signup_form() {
       };
     }
   }, [error]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-    } else if (!email || !password || !confirmPassword) {
+    if (!email || !password) {
       setError("Please fill in all fields");
-    } else if (password.length < 6) {
-      setError("Password must be at least 6 characters");
     } else {
       try {
         const response = await PostData();
@@ -42,9 +35,14 @@ export default function signup_form() {
         const data = await response.json();
         console.log(data.status);
         if (data.status === "success") {
-          navigate("/Congrat");
-        } else if (data.status === "fail") {
-          setError("A parent with this Email already exists.");
+          navigate("/HomePage");
+        } else if (
+          data.status === "fail" &&
+          data.message === "Parent with this email does not exist"
+        ) {
+          setError(data.message);
+        } else {
+          setError("Invalid email or password.");
         }
       } catch (error) {
         console.log(error);
@@ -55,7 +53,7 @@ export default function signup_form() {
   async function PostData() {
     try {
       const response = await fetch(
-        `https://lms-kids.onrender.com/api/v1/parent-signup`,
+        `https://lms-kids.onrender.com/api/v1/parent-signin`,
         {
           method: "POST",
           headers: {
@@ -64,7 +62,6 @@ export default function signup_form() {
           body: JSON.stringify({
             email,
             password,
-            confirm_password: confirmPassword,
           }),
         }
       );
@@ -83,54 +80,35 @@ export default function signup_form() {
                 <input
                   type="email"
                   id="email"
-                  name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  name="email"
                   placeholder="Email Address"
-                  className=" w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
+                  className="p-4 w-full font-medium text-[24px] mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
                 />
               </div>
               <div className="mb-2">
                 <input
                   type="password"
                   id="password"
-                  name="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Password"
-                  className="w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
-                />
-              </div>
-              <div className="mb-10">
-                <input
-                  type="password"
-                  id="retype_password"
                   name="password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  placeholder="Retype Password"
-                  className=" w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
+                  placeholder="Password"
+                  className="p-4 w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
                 />
               </div>
-              {error && <ErrorMessage message={error} />}
+
+              <p className="font-medium text-right text-2xl text-[#130E5D]">
+                Forgot password
+              </p>
+
               <button
                 type="submit"
-                className="w-full h-[78px] text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-4 px-4 mb-2 rounded-xl"
+                className="w-full h-[78px] mt-20 px-4 py-2 text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-2 px-4 mb-2 rounded-xl"
               >
                 Continue
               </button>
-              <a
-                href="#"
-                className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
-              >
-                <button
-                  onClick={() => navigate(-1)}
-                  type="button"
-                  className="mt-5 text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl p-2 me-5"
-                >
-                  Back
-                </button>
-              </a>
             </form>
             <div className="flex items-center justify-center mb-7">
               <div className="border-[2px] border-[#130E5D]"></div>
@@ -149,11 +127,5 @@ export default function signup_form() {
         </div>
       </div>
     </>
-  );
-}
-
-function ErrorMessage({ message }) {
-  return (
-    <p className="text-red-500 text-2xl font-medium italic mb-4">{message}</p>
   );
 }

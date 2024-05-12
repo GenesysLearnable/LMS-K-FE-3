@@ -68,7 +68,7 @@ function Feature({ featObj }) {
   const { image, feature: featureName } = featObj;
   return (
     <li className="rounded-lg w-[13.8rem]">
-      <div className="flex gap-6 hover:bg-[#FF6A00] transition-all px-[1rem] py-2 rounded-full cursor-pointer">
+      <div className="flex gap-6 hover:bg-[#FF6A00] transition-all px-[1rem] py-2 rounded-full cursor-pointer ">
         <img src={image} alt={featureName}></img>
         <h1 className="font-semibold">{featureName}</h1>
       </div>

@@ -1,0 +1,40 @@
+.hiparent-body {
+  background: #ffd166;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hiparent-sub {
+  background-color: white;
+  width: 64vw;
+  height: 400px;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 12px;
+}
+.hiparent-sub .h3 {
+  color: #130e5d;
+}
+.hiparent-text {
+  font-size: 40px;
+  font-family: Bubblegum Sans;
+}
+.hiparent-sub {
+  color: #130e5d;
+}
+.hiparent-sub p {
+  color: #130e5d;
+  margin: 0 100px 50px 100px;
+  font-size: 16px;
+  font-family: Quicksand;
+}
+.hiparent-sub h4 {
+  font-size: 22px;
+  margin-top: 70px;
+  font-family: Bubblegum Sans;
+}
+.hiparent-body img {
+  width: 48px;
+}
