@@ -1,11 +1,11 @@
-import kids_1 from "../assets/kids_1.png";
-import kids_2 from "../assets/kids_2.png";
-import kids_3 from "../assets/kids_3.png";
-import kids_4 from "../assets/kids_4.png";
-import phonics from "../assets/phonics.png";
-import reasoning from "../assets/reasoning.png";
-import math from "../assets/math.png";
-import vocabulary from "../assets/vocabulary.png";
+import kids_1 from "../../assets/kids_1.png";
+import kids_2 from "../../assets/kids_2.png";
+import kids_3 from "../../assets/kids_3.png";
+import kids_4 from "../../assets/kids_4.png";
+import phonics from "../../assets/phonics.png";
+import reasoning from "../../assets/reasoning.png";
+import math from "../../assets/Math.png";
+import vocabulary from "../../assets/vocabulary.png";
 
 export default function MainSection() {
 	return (

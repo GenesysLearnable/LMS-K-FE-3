@@ -70,7 +70,7 @@ export default function Login() {
             email,
             password,
           }),
-        }
+        },
       );
       return response;
     } catch (error) {
@@ -105,6 +105,18 @@ export default function Login() {
                   className="p-4 w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
                 />
               </div>
+              <a
+                href="#"
+                className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
+              >
+                <button
+                  onClick={() => navigate(-1)}
+                  type="button"
+                  className="mt-5 text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl p-2 me-5"
+                >
+                  Back
+                </button>
+              </a>
               <ToastContainer />
               {error && <ErrorMessage message={error} />}
               <p className="font-medium text-right text-2xl text-[#130E5D]">

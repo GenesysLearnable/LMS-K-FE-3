@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Login from "./pages/login/Login";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/homepage/HomePage";
 import Hiparent from "./pages/sign_up/Hiparent";
 import Notice from "./pages/sign_up/Notice";
 import { ToastContainer } from "react-toastify";

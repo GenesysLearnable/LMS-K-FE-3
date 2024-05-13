@@ -1,11 +1,11 @@
-import home from "../images/home.png";
-import learning from "../images/learning.png";
-import quiz from "../images/quiz.png";
-import games from "../images/games.png";
-import profile from "../images/profile.png";
-import settings from "../images/settings.png";
-import payment from "../images/payment.png";
-import feedback from "../images/feedback.png";
+import home from "../../assets/homepage/home.png";
+import learning from "../../assets/homepage/learning.png";
+import quiz from "../../assets/homepage/quiz.png";
+import games from "../../assets/homepage/games.png";
+import profile from "../../assets/homepage/profile.png";
+import settings from "../../assets/homepage/settings.png";
+import payment from "../../assets/homepage/payment.png";
+import feedback from "../../assets/homepage/feedback.png";
 
 export const features = [
   {
