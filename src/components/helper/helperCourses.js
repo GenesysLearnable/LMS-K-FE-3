@@ -1,7 +1,7 @@
-import ABC from "../images/ABC.png";
-import CriticalThinking from "../images/CriticalThinking.png";
-import Booklet from "../images/Booklet.png";
-import Math from "../images/Math.png";
+import ABC from "../../assets/homepage/ABC.png";
+import CriticalThinking from "../../assets/homepage/CriticalThinking.png";
+import Booklet from "../../assets/homepage/Booklet.png";
+import Math from "../../assets/homepage/Math.png";
 
 export const Courses = [
   {

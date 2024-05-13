@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
-import { features } from "../assets/homepage/helper/helperButtons";
-import { Courses } from "../assets/homepage/helper/helperCourses";
-
-import homelogo from "../assets/homepage/images/homelogo.png";
-import profilePicture from "../assets/homepage/images/profilePicture.png";
-import homeProfile from "../assets/homepage/images/homeProfile.png";
-import footerkids from "../assets/homepage/images/footerkids.png";
+import { features } from "../../components/helper/helperButtons";
+import { Courses } from "../../components/helper/helperCourses";
+import homelogo from "../../assets/homepage/homelogo.png";
+import profilePicture from "../../assets/homepage/profilePicture.png";
+import homeProfile from "../../assets/homepage/homeProfile.png";
+import footerkids from "../../assets/homepage/footerkids.png";
 
 // flex flex-col h-dvh items-center rounded-r-[2.5rem]absolute top-0 left-0 gap-[3.125rem]
 function HomePage() {

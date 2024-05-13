@@ -1,5 +1,5 @@
 import React from "react";
-import footer_logo from "../assets/footer_logo.png";
+import footer_logo from "../../assets/footer_logo.png";
 
 export default function footer() {
 	return (
@@ -18,8 +18,8 @@ export default function footer() {
 						></path>
 					</svg>
 				</div>
-				<div className="text-center text-white bg-[#130E5D]">
-					<p className="font-bold text-5xl pt-10">Contact Us</p>
+				<div className="text-center text-white bg-[#130E5D] h-full">
+					<p className="font-bold text-5xl pt-8">Contact Us</p>
 					<p className="text-base font-bold mt-5">
 						Reach out at learnablekids-feedback@learnable.com
 					</p>

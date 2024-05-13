@@ -45,7 +45,10 @@ export default function signup_form() {
 
 				const data = await response.json();
 				if (data.status === "Success") {
-					toast.success("Sign up was successful", navigate("/Login"));
+					toast.success(
+						"Sign up was successful",
+						navigate("/Congrat"),
+					);
 				} else if (data.status === "fail") {
 					toast.error(data.message);
 					setError(data.message);
@@ -97,7 +100,7 @@ export default function signup_form() {
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
 									placeholder="Email Address"
-									className=" w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
+									className="p-4 w-full font-medium text-[24px] mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
 								/>
 							</div>
 							<div className="mb-2">
@@ -110,7 +113,7 @@ export default function signup_form() {
 										setPassword(e.target.value)
 									}
 									placeholder="Password"
-									className="w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
+									className="p-4 w-full font-medium text-[24px] mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
 								/>
 							</div>
 							<div className="mb-10">
@@ -123,7 +126,7 @@ export default function signup_form() {
 										setConfirmPassword(e.target.value)
 									}
 									placeholder="Retype Password"
-									className=" w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
+									className="p-4 w-full font-medium text-[24px] mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
 								/>
 							</div>
 							<ToastContainer />
