@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-          quicksand:['Quicksand', 'san-serif'],
-          bubble:['Bubblegum Sans', 'san-serif']
+          quicksand:['Quicksand', 'sans-serif'],
+          bubble:['Bubblegum Sans']
       },
       colors:{
         primary:'#ffd966',
