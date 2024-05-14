@@ -2,7 +2,6 @@
 import { Navigate, Link } from "react-router-dom";
 import confetti from "../../assets/confetti.png";
 import "../sign_up/Congrat.css";
-// import cheers from "../components/image/Festive flags and hands with decorations.png";
 
 function Congrat() {
   return (
