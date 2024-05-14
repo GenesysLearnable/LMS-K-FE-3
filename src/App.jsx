@@ -15,7 +15,7 @@ import SignupForm from "./pages/sign_up/SignupForm";
 import Congrat from "./pages/sign_up/Congrat";
 import ProtectedRoutes from "./ProtectedRoutes";
 
-const token = localStorage.getItem("token");
+const token = sessionStorage.getItem("token");
 const router = createBrowserRouter([
   {
     path: "/",
