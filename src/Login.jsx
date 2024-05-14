@@ -1,5 +1,12 @@
 import React from "react";
 
+import ReactDOM from 'react-dom';
+import App from './App.jsx'; // Adjust the path as necessary
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+
 export default function Login() {
   return (
     <div className="flex w-full h-screen bg-yellow-800">
