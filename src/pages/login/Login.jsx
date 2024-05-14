@@ -38,7 +38,7 @@ export default function Login() {
         const data = await response.json();
         console.log(data.status);
         if (data.status.toLowerCase() === "success") {
-          localStorage.setItem("token", data.token);
+          sessionStorage.setItem("token", data.token);
 
           toast.success("Login successfully!");
           navigate("/HomePage");

@@ -2,6 +2,7 @@
   "name": "lms-k-fe-3",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://github.com/learnable-2023/LMS-K-FE-3",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
