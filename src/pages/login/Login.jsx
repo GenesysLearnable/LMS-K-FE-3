@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
+import google from "../../assets/google.svg";
+import facebook from "../../assets/facebook.png";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -105,23 +108,19 @@ export default function Login() {
                   className="p-4 w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
                 />
               </div>
-              <a
-                href="#"
-                className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
-              >
-                <button
-                  onClick={() => navigate(-1)}
-                  type="button"
-                  className="mt-5 text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl p-2 me-5"
-                >
-                  Back
-                </button>
-              </a>
+              <div className="flex justify-end items-center">
+                <a
+                  href="#"
+                  className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
+                ></a>
+                <Link to="/ForgotPassword">
+                  <p className="font-medium text-right text-2xl text-[#130E5D]">
+                    Forgot password
+                  </p>
+                </Link>
+              </div>
               <ToastContainer />
               {error && <ErrorMessage message={error} />}
-              <p className="font-medium text-right text-2xl text-[#130E5D]">
-                Forgot password
-              </p>
 
               <button
                 type="submit"
@@ -132,15 +131,25 @@ export default function Login() {
             </form>
             <div className="flex items-center justify-center mb-7">
               <div className="border-[2px] border-[#130E5D]"></div>
-              <p className="text-[32px] font-medium">or</p>
+              <p className="text-[32px] font-medium py-[64px]">or</p>
               <div className="border-[2px] border-[#130E5D]"></div>
             </div>
             <div className="border-dashed border-2 rounded-xl border-[#1877F2] p-5">
               <button className="w-full h-[78px] mb-5 rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-                Continue with Google
+                <div className="flex items-center justify-center gap-x-2">
+                  <img src={google} className="w-[28px]" alt="google icon" />
+                  Continue with Google
+                </div>
               </button>
               <button className="w-full h-[78px] rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-                Continue with Facebook
+                <div className="flex items-center justify-center gap-x-2">
+                  <img
+                    src={facebook}
+                    className="w-[28px]"
+                    alt="facebook icon"
+                  />
+                  Continue with Facebook
+                </div>{" "}
               </button>
             </div>
           </div>
