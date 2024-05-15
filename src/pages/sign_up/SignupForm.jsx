@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import metamask from "../../assets/metamask.svg";
+import google from "../../assets/google.svg";
+import facebook from "../../assets/facebook.png";
 
 export default function signup_form() {
 	const navigate = useNavigate();
@@ -84,7 +87,7 @@ export default function signup_form() {
 	}
 	return (
 		<>
-			<div className="flex items-center justify-center h-[1100px] w-full bg-yellow-300">
+			<div className="flex items-center justify-center h-full w-full py-24 bg-yellow-300">
 				<div className="px-[200px] py-[100px] rounded-xl bg-white">
 					<div className="bg-white rounded-xl w-[676px]">
 						<form
@@ -131,38 +134,66 @@ export default function signup_form() {
 							</div>
 							<ToastContainer />
 							{error && <ErrorMessage message={error} />}
+
 							<button
 								type="submit"
-								className="w-full h-[78px] text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-4 px-4 mb-2 rounded-xl"
+								className="w-full h-[78px] text-[32px] bg-[#130E5D] text-white font-bold py-4 px-4 mb-[64px] rounded-xl"
+							>
+								<div className="flex items-center justify-center gap-x-2">
+									Connect metamask{" "}
+									<img
+										src={metamask}
+										className="w-[48px]"
+										alt="metamask icon"
+									/>
+								</div>
+							</button>
+							<button
+								type="submit"
+								className="w-full h-[78px] text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-4 px-4 rounded-xl"
 							>
 								Continue
 							</button>
-							<a
-								href="#"
-								className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
-							>
-								<button
-									onClick={() => navigate(-1)}
-									type="button"
-									className="mt-5 text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl p-2 me-5"
-								>
-									Back
-								</button>
-							</a>
 						</form>
-						<div className="flex items-center justify-center mb-7">
+						<div className="flex items-center justify-center mb-[64px] mt-[64px]">
 							<div className="border-[2px] border-[#130E5D]"></div>
 							<p className="text-[32px] font-medium">or</p>
 							<div className="border-[2px] border-[#130E5D]"></div>
 						</div>
 						<div className="border-dashed border-2 rounded-xl border-[#1877F2] p-5">
 							<button className="w-full h-[78px] mb-5 rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-								Continue with Google
+								<div className="flex items-center justify-center gap-x-2">
+									<img
+										src={google}
+										className="w-[28px]"
+										alt="google icon"
+									/>
+									Continue with Google
+								</div>
 							</button>
 							<button className="w-full h-[78px] rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-								Continue with Facebook
+								<div className="flex items-center justify-center gap-x-2">
+									<img
+										src={facebook}
+										className="w-[28px]"
+										alt="facebook icon"
+									/>
+									Continue with Facebook
+								</div>{" "}
 							</button>
 						</div>
+						<a
+							href="#"
+							className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
+						>
+							<button
+								onClick={() => navigate(-1)}
+								type="button"
+								className="mt-[64px] text-[#04031C] bg-white border-2 border-[#04031C] font-bold rounded-md text-xl p-2"
+							>
+								Back
+							</button>
+						</a>
 					</div>
 				</div>
 			</div>
