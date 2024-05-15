@@ -74,6 +74,7 @@ function Feature({ featObj }) {
     </li>
   );
 }
+
 function CourseItem({ courseObj }) {
   const { image, courseName, summary } = courseObj;
   return (
