@@ -16,7 +16,7 @@ function Congrat() {
             </span>
           </h3>
           <img src={confetti} />
-          <Link to="/Login">
+          <Link to="/ChildsName">
             <button className="w-[600px] h-[78px] text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-4 px-4 mb-2 rounded-xl">
               Continue
             </button>
