@@ -6,13 +6,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Login from "./pages/login/Login";
+import ForgotPassword from "./pages/login/ForgotPassword";
 import HomePage from "./pages/homepage/HomePage";
 import Hiparent from "./pages/sign_up/Hiparent";
-import Notice from "./pages/sign_up/Notice";
-import { ToastContainer } from "react-toastify";
-
 import SignupForm from "./pages/sign_up/SignupForm";
 import Congrat from "./pages/sign_up/Congrat";
+import Notice from "./pages/sign_up/Notice";
+import { ToastContainer } from "react-toastify";
 import ProtectedRoutes from "./ProtectedRoutes";
 
 const token = sessionStorage.getItem("token");
@@ -40,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/Congrat",
     element: <Congrat />,
+  },
+  {
+    path: "/ForgotPassword",
+    element: <ForgotPassword />,
   },
   {
     element: <ProtectedRoutes />,
