@@ -124,7 +124,7 @@ export default function Login() {
 
               <button
                 type="submit"
-                className="w-full h-[78px] mt-20 px-4 py-2 text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-2 px-4 mb-2 rounded-xl"
+                className="w-full h-[78px] mt-20 text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-2 px-4 mb-2 rounded-xl"
               >
                 Continue
               </button>
