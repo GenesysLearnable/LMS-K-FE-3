@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Login from "./pages/login/Login";
 import ForgotPassword from "./pages/login/ForgotPassword";
+import ResetPassword from "./pages/login/ResetPassword";
 import HomePage from "./pages/homepage/HomePage";
 import AdminPage from "./pages/admin_page/AdminPage";
 import Hiparent from "./pages/sign_up/Hiparent";
@@ -57,8 +58,8 @@ const router = createBrowserRouter([
     element: <ForgotPassword />,
   },
   {
-    path: "/AdminPage",
-    element: <AdminPage />,
+    path: "/ResetPassword",
+    element: <ResetPassword />,
   },
   {
     element: <ProtectedRoutes />,
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: "/HomePage",
         element: <HomePage />,
+      },
+      {
+        path: "/AdminPage",
+        element: <AdminPage />,
       },
     ],
   },
