@@ -67,7 +67,7 @@ export default function signup_form() {
 	async function PostData() {
 		try {
 			const response = await fetch(
-				`https://lms-kids.onrender.com/api/v1/parent-signup`,
+				`https://lms-k-be-3.onrender.com/api/v1/parent-signup`,
 				{
 					method: "POST",
 					headers: {

@@ -8,9 +8,12 @@ import {
 import Login from "./pages/login/Login";
 import ForgotPassword from "./pages/login/ForgotPassword";
 import HomePage from "./pages/homepage/HomePage";
+import AdminPage from "./pages/admin_page/AdminPage";
 import Hiparent from "./pages/sign_up/Hiparent";
 import SignupForm from "./pages/sign_up/SignupForm";
 import Congrat from "./pages/sign_up/Congrat";
+import ChildsName from "./pages/sign_up/ChildsName";
+import ChildsAge from "./pages/sign_up/ChildsAge";
 import Notice from "./pages/sign_up/Notice";
 import { ToastContainer } from "react-toastify";
 import ProtectedRoutes from "./ProtectedRoutes";
@@ -42,8 +45,20 @@ const router = createBrowserRouter([
     element: <Congrat />,
   },
   {
+    path: "/ChildsName",
+    element: <ChildsName />,
+  },
+  {
+    path: "/ChildsAge",
+    element: <ChildsAge />,
+  },
+  {
     path: "/ForgotPassword",
     element: <ForgotPassword />,
+  },
+  {
+    path: "/AdminPage",
+    element: <AdminPage />,
   },
   {
     element: <ProtectedRoutes />,

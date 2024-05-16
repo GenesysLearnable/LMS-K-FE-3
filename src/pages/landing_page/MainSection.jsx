@@ -12,7 +12,7 @@ export default function MainSection() {
 		<>
 			<main>
 				<section className="curve">
-					<div className="mt-5 flex flex-col items-center justify-center bg-[#FFE787]">
+					<div className="flex flex-col items-center justify-center bg-[#FFE787]">
 						<div className="flex gap-x-28 w-[1034px] mt-2">
 							<div className="space-y-5 mt-10">
 								<p className="text-5xl font-bold text-[#130E5D]">
