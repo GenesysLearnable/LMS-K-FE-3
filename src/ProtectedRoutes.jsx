@@ -2,7 +2,7 @@ import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 function ProtectedRoutes() {
   function userAuth() {
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     return token;
   }
 
