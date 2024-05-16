@@ -8,6 +8,7 @@ import {
 import Login from "./pages/login/Login";
 import ForgotPassword from "./pages/login/ForgotPassword";
 import HomePage from "./pages/homepage/HomePage";
+import AdminPage from "./pages/admin_page/AdminPage";
 import Hiparent from "./pages/sign_up/Hiparent";
 import SignupForm from "./pages/sign_up/SignupForm";
 import Congrat from "./pages/sign_up/Congrat";
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: "/ForgotPassword",
     element: <ForgotPassword />,
+  },
+  {
+    path: "/AdminPage",
+    element: <AdminPage />,
   },
   {
     element: <ProtectedRoutes />,

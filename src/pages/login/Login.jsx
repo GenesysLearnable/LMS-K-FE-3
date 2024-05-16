@@ -63,7 +63,7 @@ export default function Login() {
   async function PostData() {
     try {
       const response = await fetch(
-        `https://lms-kids.onrender.com/api/v1/parent-signin`,
+        `https://lms-k-be-3.onrender.com/api/v1/parent-signin`,
         {
           method: "POST",
           headers: {

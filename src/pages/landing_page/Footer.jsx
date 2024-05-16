@@ -1,5 +1,5 @@
 import React from "react";
-import footer_logo from "../../assets/footer_logo.png";
+import footerlogo from "../../assets/footerlogo.svg";
 
 export default function footer() {
 	return (
@@ -42,7 +42,7 @@ export default function footer() {
 								<a href="">Terms</a>
 								<a href="">Privacy</a>
 							</div>
-							<img src={footer_logo} alt="learnable kids logo" />
+							<img src={footerlogo} alt="learnable kids logo" />
 						</div>
 						<div>
 							<p>2024 © Copyright Group 3 learnable23</p>

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { features } from "../../components/helper/helperButtons";
 import { Courses } from "../../components/helper/helperCourses";
-import homelogo from "../../assets/homepage/homelogo.png";
+import homelogo from "../../assets/homepage/homelogo.svg";
 import profilePicture from "../../assets/homepage/profilePicture.png";
 import homeProfile from "../../assets/homepage/homeProfile.png";
 import footerkids from "../../assets/homepage/footerkids.png";
