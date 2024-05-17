@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../sign_up/Congrat.css";
 // import cheers from "../components/image/Festive flags and hands with decorations.png";
 
@@ -15,7 +16,9 @@ function Congrat() {
           </h3>
           <img src="" className="cheers-image" />
 
-          <button className="BackBtn-2">Continue</button>
+          <Link to="/Login" className="BackBtn-2">
+            Continue
+          </Link>
         </div>
       </div>
     </div>

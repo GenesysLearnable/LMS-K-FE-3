@@ -38,7 +38,7 @@
 .hiparent-sub-1 {
   color: #130e5d;
 }
-.hiparent-sub-1 p,
+/* .hiparent-sub-1 p,
 ul li {
   color: #130e5d;
   text-align: left;
@@ -46,7 +46,7 @@ ul li {
   font-size: 14px;
   margin-right: 34px;
   font-family: Quicksand;
-}
+} */
 .hiparent-sub-1 h4 {
   font-size: 22px;
   margin-top: 70px;
