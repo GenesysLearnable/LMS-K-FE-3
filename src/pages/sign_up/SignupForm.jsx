@@ -17,6 +17,8 @@ export default function signup_form() {
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [error, setError] = useState(null);
 
+	var account = null;
+
 	// function clearField() {
 	//   setEmail("");
 	//   setPassword("");
@@ -85,6 +87,17 @@ export default function signup_form() {
 			setError(error);
 		}
 	}
+
+	async function handleConnectMetamask() {
+		if(window.ethereum) {
+			const web3 = new Web3(window.ethereum)
+			await window.ethereum.send('eth_requestAccounts')
+			const accounts = await web3.eth.getAccounts();
+			account = accounts[0];
+			
+		}
+	} 
+
 	return (
 		<>
 			<div className="flex items-center justify-center h-full w-full py-24 bg-yellow-300">
@@ -135,8 +148,8 @@ export default function signup_form() {
 							<ToastContainer />
 							{error && <ErrorMessage message={error} />}
 
-							<button
-								type="submit"
+							<div
+								onClick={handleConnectMetamask}
 								className="w-full h-[78px] text-[32px] bg-[#130E5D] text-white font-bold py-4 px-4 mb-[64px] rounded-xl"
 							>
 								<div className="flex items-center justify-center gap-x-2">
@@ -147,7 +160,7 @@ export default function signup_form() {
 										alt="metamask icon"
 									/>
 								</div>
-							</button>
+							</div>
 							<button
 								type="submit"
 								className="w-full h-[78px] text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-4 px-4 rounded-xl"
