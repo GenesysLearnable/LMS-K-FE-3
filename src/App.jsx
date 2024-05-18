@@ -5,11 +5,14 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
+import { useState } from "react";
 import Login from "./pages/login/Login";
 import ForgotPassword from "./pages/login/ForgotPassword";
 import ResetPassword from "./pages/login/ResetPassword";
 import HomePage from "./pages/homepage/HomePage";
 import AdminPage from "./pages/admin_page/AdminPage";
+import Dashboard from "./pages/admin_page/Dashboard";
+import Course from "./pages/admin_page/Course";
 import Hiparent from "./pages/sign_up/Hiparent";
 import SignupForm from "./pages/sign_up/SignupForm";
 import Congrat from "./pages/sign_up/Congrat";
@@ -72,10 +75,19 @@ const router = createBrowserRouter([
         path: "/AdminPage",
         element: <AdminPage />,
       },
+      {
+        path: "/Dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/Course",
+        element: <Course />,
+      },
     ],
   },
 ]);
 function App() {
+  const [activePage, setActivePage] = useState("Dashboard");
   return (
     <>
       <ToastContainer closeOnClick={true} />
