@@ -4,7 +4,7 @@ import kids_3 from "../../assets/kids_3.png";
 import kids_4 from "../../assets/kids_4.png";
 import phonics from "../../assets/phonics.png";
 import reasoning from "../../assets/reasoning.png";
-import math from "../../assets/Math.png";
+import math from "../../assets/mathematics.png";
 import vocabulary from "../../assets/vocabulary.png";
 
 export default function MainSection() {
