@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import metamask from "../../assets/metamask.svg";
 import google from "../../assets/google.svg";
 import facebook from "../../assets/facebook.png";
+import Web3 from 'web3';
 
 export default function signup_form() {
 	const navigate = useNavigate();
