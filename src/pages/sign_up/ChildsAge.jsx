@@ -23,6 +23,9 @@ function Age() {
                             <span>9-12 years</span>
                         </label>
 
+                        <Link to="/Login">
+                            <button>Submit</button>
+                        </Link>
                         <div className="age-btn">
                             <button className="BackBtn">Back</button>
                         </div>
