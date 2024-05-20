@@ -13,7 +13,7 @@ import AdminPage from "./pages/admin_page/AdminPage";
 import Hiparent from "./pages/sign_up/Hiparent";
 import SignupForm from "./pages/sign_up/SignupForm";
 import Congrat from "./pages/sign_up/Congrat";
-import ChildsName from "./pages/sign_up/ChildsName";
+import ChildsName from "./pages/sign_up/Childsname";
 import ChildsAge from "./pages/sign_up/ChildsAge";
 import Notice from "./pages/sign_up/Notice";
 import { ToastContainer } from "react-toastify";
