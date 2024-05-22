@@ -148,19 +148,16 @@ export default function signup_form() {
 							<ToastContainer />
 							{error && <ErrorMessage message={error} />}
 
-							<button
-								onClick={handleConnectMetamask}
-								className="w-full h-[78px] text-[32px] bg-[#130E5D] text-white font-bold py-4 px-4 mb-[64px] rounded-xl"
-							>
-								<div className="flex items-center justify-center gap-x-2">
-									Connect metamask{" "}
-									<img
-										src={metamask}
-										className="w-[48px]"
-										alt="metamask icon"
-									/>
-								</div>
+							<button 
+								onClick={handleConnectMetamask} 
+								type="button" 
+								className="w-full h-[78px] text-[32px] bg-[#130E5D] text-white font-bold py-4 px-4 mb-[64px] rounded-xl">
+  									<div className="flex items-center justify-center gap-x-2">
+    									Connect metamask{" "}
+    									<img src={metamask} className="w-[48px]" alt="metamask icon" />
+  									</div>
 							</button>
+
 							<button
 								type="submit"
 								className="w-full h-[78px] text-[32px] bg-[#FFD012] text-[#04031C] font-bold py-4 px-4 rounded-xl"
