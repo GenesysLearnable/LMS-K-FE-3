@@ -1,3 +1,10 @@
+import iconify from '../../assets/iconify.png'
+import bitcoin from '../../assets/bitcoin.png'
+import  etherum from '../../assets/ethereum.png'
+import  usd from '../../assets/usd.png'
+import frame from  '../../assets/Frame.png'
+import Photo from '../../assets/Frame1.png'
+import picturess from '../../assets/Frame2.png'
 function Crypto(){
     return(
         <div className="bg-white  w-full h-screen">
@@ -5,25 +12,54 @@ function Crypto(){
                 
             <button className="mt-20 relative right-1/3 border-2 border-yellow-400 w-28 h-14 rounded-lg text-xl text-[#130E5D]" >Back</button>
                 <h2 className="text-[#130E5D] text-6xl font-semibold">Crypto Payment Method</h2>
-                <div>
-                    <img/>
-                    <img/>
-                </div>
-                <p><img/><span>Bitcoin</span></p>
-                <p><img/>Ethereum</p>
-                <p><img/>USDT</p>
-                <p>
-                    I have  read and agreed with this website
-                </p>
-                <div>
-                    <div>Total</div>
-                    <div>3.00USD</div>
-                </div>
-                <div>
-                    <div>Amount in BTC</div>
-                    <div>0.000016BTC</div>
+                
+                    <div className='flex justify-between items-center mt-[120px] px-4'>
+                        
+                                <img src={iconify} alt="Iconify" className="w-14 relative left-80" />
+
+
+                                <div className="flex space-x-4  relative right-80">
+
+
+                    <img src={bitcoin} className='w-14'/>
+                    <img src ={etherum}/>
+                    <img src={usd}/>
                     </div>
-                    <button>Confirm Payment</button>
+                    </div>
+
+                    <div>
+                   
+                     <img src={picturess} alt="Bitcoin" className='relative left-80 mt-3.5 '/>
+                </div>
+
+                <div>
+                    <img src={frame} className='relative left-[350px]' />
+                </div>
+                
+                <div>
+                    <img src={Photo} className='relative left-[350px]'/>
+                </div>
+
+
+                <div className='text-black font-bold  flex items-center justify-center mt-20'>
+                <input id="agree" type="checkbox" className="form-checkbox h-5 w-5 text-blue-600"/>
+
+                <label for="agree" className="ml-2 text-black text-2xl">I have read and agree to the website's terms and conditions</label>
+
+                </div>
+
+                <div>
+                    <div className='flex justify-around text-[#130E5D] text-4xl font-bold mt-20'><span className='relative left-[87px]'>Total</span> 
+                    <span className='relative right-10'>3.00USD</span> 
+                    </div>
+                </div>
+                <div>
+                 
+                    <div className='text-[#130E5D] font-bold flex justify-around text-4xl mt-14 '><span className='relative left-[144px]'>Amount in BTC</span> 
+                    <span className='relative right-7'>0.000016BTC</span></div>
+    
+                    </div>
+                    <button  className='w-[676px] h-[78px] text-[32px] bg-[#130E5D] font-bold  rounded-lg text-white mt-14'>Confirm your Payment</button>
 
                     </div>
             </div>
