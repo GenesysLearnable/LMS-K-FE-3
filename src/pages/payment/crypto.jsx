@@ -29,15 +29,15 @@ function Crypto(){
 
                     <div>
                    
-                     <img src={picturess} alt="Bitcoin" className='relative left-80 mt-3.5 '/>
+                   <a href='#' > <img src={picturess} alt="Bitcoin" className='relative left-80 mt-3.5 '/> </a>
                 </div>
 
                 <div>
-                    <img src={frame} className='relative left-[350px]' />
+                   <a href='#'> <img src={frame} className='relative left-[350px]' /></a>
                 </div>
                 
                 <div>
-                    <img src={Photo} className='relative left-[350px]'/>
+                <a href='#'>   <img src={Photo} className='relative left-[350px]'/> </a>
                 </div>
 
 
