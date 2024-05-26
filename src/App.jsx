@@ -1,4 +1,5 @@
 import "./App.css";
+import Crypto from "./pages/payment/crypto";
 import LandingPage from "./pages/landing_page/LandingPage";
 import {
   createBrowserRouter,
@@ -21,6 +22,10 @@ import ProtectedRoutes from "./ProtectedRoutes";
 
 const token = sessionStorage.getItem("token");
 const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<Crypto />
+  },
   {
     path: "/",
     element: <LandingPage />,

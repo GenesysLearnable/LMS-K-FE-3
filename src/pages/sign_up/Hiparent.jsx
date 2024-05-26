@@ -47,7 +47,7 @@ function Hiparent() {
                             </button>
                         </Link>{" "}
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
     );
