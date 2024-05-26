@@ -10,9 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.2",
+    "flowbite": "^2.3.0",
+    "install": "^0.13.0",
+    "npm": "^10.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.0"
+    "react-router-dom": "^6.23.0",
+    "vite-plugin-require": "^1.2.14"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

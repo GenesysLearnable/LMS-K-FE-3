@@ -42,6 +42,10 @@ const router = createBrowserRouter([
             path: "/LearningPage/maths",
             element: <Math />,
           },
+          {
+            path: "/LearningPage/Phonics",
+            element: <Phonics />,
+          },
         ],
       },
       {

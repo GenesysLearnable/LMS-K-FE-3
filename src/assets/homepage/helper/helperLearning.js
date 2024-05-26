@@ -8,7 +8,7 @@ export const Learning = [
   {
     courseName: "Phonics",
     image: phonics,
-    path: "/LearningPage",
+    path: "/phonics",
   },
   {
     courseName: "Math",
@@ -24,10 +24,5 @@ export const Learning = [
     courseName: "Reasoning",
     image: reasoning,
     path: "/LearningPage/reasoning",
-  },
-  {
-    courseName: "Create",
-    image: create,
-    path: "/LearningPage/create",
   },
 ];
