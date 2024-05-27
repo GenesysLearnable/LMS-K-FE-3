@@ -1,4 +1,6 @@
 import "./App.css";
+import Qrcode from "./pages/payment/qrcode";
+import Crypt from "./pages/payment/crypt";
 import LandingPage from "./pages/landing_page/LandingPage";
 import {
   createBrowserRouter,
@@ -25,6 +27,14 @@ import ProtectedRoutes from "./ProtectedRoutes";
 const token = sessionStorage.getItem("token");
 const router = createBrowserRouter([
   {
+    path:"/",
+    element:<Qrcode/>
+  },
+  {
+    path:"/",
+    element:<Crypt/>
+  },
+  {
     path: "/",
     element: <LandingPage />,
   },
@@ -49,7 +59,7 @@ const router = createBrowserRouter([
     element: <Congrat />,
   },
   {
-    path: "/ChildsName",
+    path: "/Childsname",
     element: <ChildsName />,
   },
   {
