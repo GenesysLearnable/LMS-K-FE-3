@@ -36,6 +36,7 @@ import Math from "./pages/homepage/Math";
 
 import { ToastContainer } from "react-toastify";
 import ProtectedRoutes from "./ProtectedRoutes";
+import ConfirmPayment from "./pages/payment/ConfirmPayment";
 
 const token = sessionStorage.getItem("token");
 const router = createBrowserRouter([
@@ -86,6 +87,20 @@ const router = createBrowserRouter([
       {
         path: "/PaymentPage",
         element: <PlansPaymentPage />,
+        children: [
+          {
+            index: true,
+            element: <Crypt />,
+          },
+          {
+            path: "qrcode",
+            element: <Qrcode />,
+          },
+          {
+            path: "confirmpayment",
+            element: <ConfirmPayment />,
+          },
+        ],
       },
       {
         path: "/FeedBackPage",
