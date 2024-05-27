@@ -27,7 +27,7 @@ async function getBlockNum() {
 
 getBlockNum();
 
-setInterval(function() {
+var checkPayment = setInterval(function() {
 
     contract.getPastEvents(
         'Transfer', 
@@ -48,6 +48,7 @@ setInterval(function() {
         if(test == 50) {
           console.log("successful")
           setIsConfirmed(true)
+          clearInterval(checkPayment);
       
         }else {
           console.log("unsuccessful")
