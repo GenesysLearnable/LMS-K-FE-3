@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import metamask from "../../assets/metamask.svg";
 import google from "../../assets/google.svg";
 import facebook from "../../assets/facebook.png";
-import Web3 from 'web3';
+import Web3 from "web3";
 
 export default function signup_form() {
 	const navigate = useNavigate();
@@ -147,15 +147,27 @@ export default function signup_form() {
 							<ToastContainer />
 							{error && <ErrorMessage message={error} />}
 
-							<button 
-								onClick={handleConnectMetamask} 
+							<button
+								onClick={handleConnectMetamask}
 								type="button"
-								disabled={account} 
-								className="w-full h-[78px] text-[32px] bg-[#130E5D] text-white font-bold py-4 px-4 mb-[64px] rounded-xl">
-  									<div className="flex items-center truncate justify-center gap-x-2">
-    									{account ? account :(<> Connect metamask
-    									<img src={metamask} className="w-[48px]" alt="metamask icon" /></>)}
-  									</div>
+								disabled={account}
+								className="w-full h-[78px] text-[32px] bg-[#130E5D] text-white font-bold py-4 px-4 mb-[64px] rounded-xl"
+							>
+								<div className="flex items-center truncate justify-center gap-x-2">
+									{account ? (
+										account
+									) : (
+										<>
+											{" "}
+											Connect metamask
+											<img
+												src={metamask}
+												className="w-[48px]"
+												alt="metamask icon"
+											/>
+										</>
+									)}
+								</div>
 							</button>
 
 							<button
@@ -165,33 +177,7 @@ export default function signup_form() {
 								Continue
 							</button>
 						</form>
-						<div className="flex items-center justify-center mb-[64px] mt-[64px]">
-							<div className="border-[2px] border-[#130E5D]"></div>
-							<p className="text-[32px] font-medium">or</p>
-							<div className="border-[2px] border-[#130E5D]"></div>
-						</div>
-						<div className="border-dashed border-2 rounded-xl border-[#1877F2] p-5">
-							<button className="w-full h-[78px] mb-5 rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-								<div className="flex items-center justify-center gap-x-2">
-									<img
-										src={google}
-										className="w-[28px]"
-										alt="google icon"
-									/>
-									Continue with Google
-								</div>
-							</button>
-							<button className="w-full h-[78px] rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-								<div className="flex items-center justify-center gap-x-2">
-									<img
-										src={facebook}
-										className="w-[28px]"
-										alt="facebook icon"
-									/>
-									Continue with Facebook
-								</div>{" "}
-							</button>
-						</div>
+
 						<a
 							href="#"
 							className="text-2xl font-bold no-underline text-[#130E5D] ml-2"

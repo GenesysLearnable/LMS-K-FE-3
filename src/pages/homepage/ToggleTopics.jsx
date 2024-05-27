@@ -24,8 +24,15 @@ function ToggleTopics({ child, onToggleComplete }) {
   return (
     <div className="course-item">
       {/*<h3>{course.name}</h3>*/}
-      <button onClick={handleToggleComplete}>
-        {isCompleted ? "Completed" : "Mark Complete"}
+      <button
+        onClick={handleToggleComplete}
+        className="mt-5 mb-5 bg-transparent hover:bg-yellow-500 font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded"
+      >
+        {isCompleted ? (
+          <span className="text-green-600 font-bold">Completed</span>
+        ) : (
+          <span>Mark Complete</span>
+        )}
       </button>
     </div>
   );

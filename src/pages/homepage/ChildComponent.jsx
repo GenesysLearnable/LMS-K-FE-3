@@ -61,8 +61,7 @@ function ChildComponent({ parentId }) {
           {childData.map((child, index) => (
             <li>
               {/* Render child data properties */}
-              <h2 className="font-bold">{child.title}</h2>
-
+              <h2 className="font-bubble mt-5 text-xl">{child.title}</h2>{" "}
               <p>{child.description}</p>
               <ToggleTopics
                 key={child._id}

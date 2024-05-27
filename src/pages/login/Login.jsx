@@ -130,29 +130,6 @@ export default function Login() {
                 Continue
               </button>
             </form>
-            <div className="flex items-center justify-center mb-7">
-              <div className="border-[2px] border-[#130E5D]"></div>
-              <p className="text-[32px] font-medium py-[64px]">or</p>
-              <div className="border-[2px] border-[#130E5D]"></div>
-            </div>
-            <div className="border-dashed border-2 rounded-xl border-[#1877F2] p-5">
-              <button className="w-full h-[78px] mb-5 rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-                <div className="flex items-center justify-center gap-x-2">
-                  <img src={google} className="w-[28px]" alt="google icon" />
-                  Continue with Google
-                </div>
-              </button>
-              <button className="w-full h-[78px] rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-                <div className="flex items-center justify-center gap-x-2">
-                  <img
-                    src={facebook}
-                    className="w-[28px]"
-                    alt="facebook icon"
-                  />
-                  Continue with Facebook
-                </div>{" "}
-              </button>
-            </div>
           </div>
         </div>
       </div>

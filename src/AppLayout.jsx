@@ -2,7 +2,7 @@ import { Outlet, useNavigation } from "react-router-dom";
 import AppNavbar from "./components/AppNavbar";
 
 import Loader from "./Loader";
-// import HeaderNav from "./components/HeaderNav";
+import HeaderNav from "./components/HeaderNav";
 
 function AppLayout() {
   const navigate = useNavigation();
