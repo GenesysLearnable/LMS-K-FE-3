@@ -21,22 +21,86 @@ import Congrat from "./pages/sign_up/Congrat";
 import ChildsName from "./pages/sign_up/Childsname";
 import ChildsAge from "./pages/sign_up/ChildsAge";
 import Notice from "./pages/sign_up/Notice";
+
+import AppLayout from "./AppLayout";
+import QuizPage from "./pages/homepage/QuizPage";
+import GamesPage from "./pages/homepage/GamesPage";
+import LearningPage from "./pages/homepage/LearningPage";
+import ProfilePage from "./pages/homepage/ProfilePage";
+import SettingsPage from "./pages/homepage/SettingsPage";
+import PlansPaymentPage from "./pages/homepage/PlansPaymentPage";
+import FeedBackPage from "./pages/homepage/FeedBackPage";
+import Logout from "./pages/homepage/Logout";
+import Phonics from "./pages/homepage/Phonics";
+import Math from "./pages/homepage/Math";
+
 import { ToastContainer } from "react-toastify";
 import ProtectedRoutes from "./ProtectedRoutes";
 
 const token = sessionStorage.getItem("token");
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <Qrcode />,
+  // },
+  // {
+  //   path: "/",
+  //   element: <Crypt />,
+  // },
+
   {
-    path:"/",
-    element:<Qrcode/>
+    element: <AppLayout />,
+    children: [
+      { index: true, path: "/", element: <HomePage /> },
+      {
+        path: "/QuizPage",
+        element: <QuizPage />,
+      },
+      {
+        path: "/LearningPage",
+        element: <LearningPage />,
+        children: [
+          {
+            index: true,
+            path: "/LearningPage",
+            element: <Phonics />,
+          },
+          {
+            path: "/LearningPage/maths",
+            element: <Math />,
+          },
+        ],
+      },
+      {
+        path: "/GamesPage",
+        element: <GamesPage />,
+      },
+      {
+        path: "/ProfilePage",
+        element: <ProfilePage />,
+      },
+      {
+        path: "/SettingsPage",
+        element: <SettingsPage />,
+      },
+      {
+        path: "/PaymentPage",
+        element: <PlansPaymentPage />,
+      },
+      {
+        path: "/FeedBackPage",
+        element: <FeedBackPage />,
+      },
+      {
+        path: "/Logout",
+        element: <Logout />,
+      },
+    ],
   },
-  {
-    path:"/",
-    element:<Crypt/>
-  },
+
   {
     path: "/",
-    element: <LandingPage />,
+    element: <HomePage />,
   },
   {
     path: "/Login",
