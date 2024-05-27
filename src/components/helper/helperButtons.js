@@ -35,6 +35,7 @@ export const features = [
   {
     feature: "Plans & Payment",
     image: payment,
+    path:"/PaymentPage"
   },
   {
     feature: "Feedback",
