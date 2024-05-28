@@ -6,39 +6,28 @@ import profile from "../../assets/homepage/profile.png";
 import settings from "../../assets/homepage/settings.svg";
 import payment from "../../assets/homepage/payment.svg";
 import feedback from "../../assets/homepage/feedback.svg";
+import logout from "../../assets/homepage/logout.svg";
 
 export const features = [
   {
     feature: "Home",
     image: home,
+    path: "/",
   },
   {
     feature: "Learning",
     image: learning,
+    path: "/LearningPage",
   },
-  {
-    feature: "Quiz",
-    image: quiz,
-  },
-  {
-    feature: "Games",
-    image: games,
-  },
-  {
-    feature: "Profile",
-    image: profile,
-  },
+
   {
     feature: "Settings",
     image: settings,
+    path: "/SettingsPage",
   },
   {
     feature: "Plans & Payment",
     image: payment,
-    path: "/PaymentPage"
-  },
-  {
-    feature: "Feedback",
-    image: feedback,
+    path: "/PaymentPage",
   },
 ];

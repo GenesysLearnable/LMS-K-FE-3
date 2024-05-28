@@ -8,7 +8,7 @@ function HeaderNav() {
       <Link to="/ProfilePage" className="cursor-pointer ">
         <img src={profilePicture} alt="profilePicture" />
       </Link>
-      <Link to="/PaymentPage" className="font-bold text-lg ">
+      <Link to="" className="font-bold text-lg ">
         Free trial
       </Link>
     </header>
