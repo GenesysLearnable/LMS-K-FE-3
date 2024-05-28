@@ -1,4 +1,5 @@
 import "./App.css";
+import Otp from "./pages/login/otp";
 import Qrcode from "./pages/payment/qrcode";
 import Crypt from "./pages/payment/crypt";
 import LandingPage from "./pages/landing_page/LandingPage";
@@ -26,6 +27,10 @@ import ProtectedRoutes from "./ProtectedRoutes";
 
 const token = sessionStorage.getItem("token");
 const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<Otp/>
+  },
   {
     path:"/",
     element:<Qrcode/>
