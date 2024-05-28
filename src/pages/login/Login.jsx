@@ -1,11 +1,8 @@
-/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
-import google from "../../assets/google.svg";
-import facebook from "../../assets/facebook.png";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -40,11 +37,10 @@ export default function Login() {
 
         const data = await response.json();
         console.log(data.status);
-        if (data.status.toLowerCase() === "success") {
+        if (data.status === "success") {
           sessionStorage.setItem("token", data.token);
-
-          toast.success("Login successfully!");
-          navigate("/HomePage");
+          toast.success("Login successful!");
+          navigate("/LearningPage");
         } else if (data.status.toLowerCase() === "fail") {
           setError(data.message);
           toast.error(data.message);
@@ -68,7 +64,6 @@ export default function Login() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            cd,
           },
           body: JSON.stringify({
             email,
@@ -109,19 +104,12 @@ export default function Login() {
                   className="p-4 w-full font-medium text-[24px]  mb-6 rounded-xl text-[#6B6B69] border-2 border-[#130E5D] bg-[#FFF0B6]"
                 />
               </div>
-              <div className="flex justify-end items-center">
-                <a
-                  href="#"
-                  className="text-2xl font-bold no-underline text-[#130E5D] ml-2"
-                ></a>
-                <Link to="/ForgotPassword">
-                  <p className="font-medium text-right text-2xl text-[#130E5D]">
-                    Forgot password
-                  </p>
-                </Link>
-              </div>
-              <ToastContainer />
-              {error && <ErrorMessage message={error} />}
+
+              <Link to="/ForgotPassword">
+                <p className="font-medium text-right text-2xl text-[#130E5D]">
+                  Forgot password
+                </p>
+              </Link>
 
               <button
                 type="submit"
@@ -130,37 +118,9 @@ export default function Login() {
                 Continue
               </button>
             </form>
-            <div className="flex items-center justify-center mb-7">
-              <div className="border-[2px] border-[#130E5D]"></div>
-              <p className="text-[32px] font-medium py-[64px]">or</p>
-              <div className="border-[2px] border-[#130E5D]"></div>
-            </div>
-            <div className="border-dashed border-2 rounded-xl border-[#1877F2] p-5">
-              <button className="w-full h-[78px] mb-5 rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-                <div className="flex items-center justify-center gap-x-2">
-                  <img src={google} className="w-[28px]" alt="google icon" />
-                  Continue with Google
-                </div>
-              </button>
-              <button className="w-full h-[78px] rounded-xl bg-white border-2 border-[#292D32] font-medium text-[24px] text-[#010A1A]">
-                <div className="flex items-center justify-center gap-x-2">
-                  <img
-                    src={facebook}
-                    className="w-[28px]"
-                    alt="facebook icon"
-                  />
-                  Continue with Facebook
-                </div>{" "}
-              </button>
-            </div>
           </div>
         </div>
       </div>
     </>
-  );
-}
-function ErrorMessage({ message }) {
-  return (
-    <p className="text-red-500 text-2xl font-medium italic mb-0">{message}</p>
   );
 }
